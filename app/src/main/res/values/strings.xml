@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Meter reading</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="copyright">\u00A9 Copyright EarthView Ltd</string>
+    <string name="title_activity_meter_location">Map</string>
+    <string name="table_reading">Reading</string>
+    <string name="meter_no">Meter No:</string>
+    <string name="p_reading">P_read</string>
+    <string name="acc_no">Acc No_</string>
+    <string name="c_name">C_name</string>
+    <string name="p_rdate">P_R Date</string>
+    <string name="meter_reader">Meter Reader</string>
+    <string name="status">Status</string>
+    <string name="C_Reading">C_Reading</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="title_activity_meter_status">MeterStatus</string>
+    <string name="title_activity_geo_fence_meter">Map</string>
+    <string name="title_activity_meter_fence">MeterFence</string>
+    <string name="title_activity_last_fence">LastFence</string>
+    <string name="title_activity_analytics">Analytics</string>
+    <string name="title_activity_survey">Survey</string>
+    <string name="title_activity_disconnection">Meter disconnection</string>
+    <string name="disconnectio_reason">Disconected By</string>
+    <string name="reconnected_by">Reconnected By</string>
+    <string name="Disconnection_method">Disconnecction Reason</string>
+    <string name="title_activity_reconnection">Reconnection</string>
+    <string name="title_activity_system_meter">SystemMeter</string>
+    <string name="title_activity_login">MajiSoft</string>
+    <string name="title_activity_landing">MajiSoft</string>
+
+</resources>

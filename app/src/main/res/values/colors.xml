@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1882F5</color><!--3F51B5-->
+    <color name="colorPrimaryDark">#1882F9</color>
+    <color name="colorPrimaryb">#163758</color><!--3F51B5-->
+    <color name="colorPrimaryDarkb">#9EC0F5</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textcolor">#1882F5</color>
+    <color name="table_content">#130202</color>
+    <color name="gray">#898298</color>
+    <color name="whiteColor">#ffffff</color>
+    <color name="blacksb">#130202</color>
+    <color name="graytint">#5443</color>
+
+    <color name="blackColor">#000000</color>
+    <color name="grayColor">#BEBEBF</color>
+    <color name="gold">#ff850a</color>
+    <color name="browntint">#8943</color>
+    <color name="browntintb">#3943</color>
+    <color name="table_cell">#9EC0F5</color>
+    <color name="tint_blue">#1100CCFF</color>
+    <color name="red">#E5080B</color>
+    <color name="green">#80B547</color>
+    <color name="orange">#F0AB4E</color>
+    <color name="yellow">#FACA20</color>
+</resources>

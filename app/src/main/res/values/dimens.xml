@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="textsize">14sp</dimen>
+    <dimen name="table_content_text">14sp</dimen>
+    <dimen name="copyright_size">12sp</dimen>
+    <dimen name="status_size">10sp</dimen>
+    <dimen name="textsizetitle">18sp</dimen>
+    <dimen name="TextEdit">25dp</dimen>
+    <dimen name="mapSize">60dp</dimen>
+    <dimen name="tableSize">20dp</dimen>
+    <dimen name="table_padding">5dip</dimen>
+    <dimen name="main_card_margin_left">0dp</dimen>
+    <dimen name="main_card_margin_right">0dp</dimen>
+    <dimen name="button_height">30dp</dimen>
+    <dimen name="table_margin">4dp</dimen>
+    <dimen name="survey_margin">9dp</dimen>
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="login_edt">20dp</dimen>
+    <dimen name="circularimg">80dp</dimen>
+
+</resources>

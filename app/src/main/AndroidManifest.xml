@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smart.earthview.majisoft">
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.smart.earthview.majisoft.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <service
+            android:name="com.smart.earthview.majisoft.geofence.GeofenceRegistrationService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="com.smart.earthview.majisoft.geofence.LocationAlertIntentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name="com.smart.earthview.majisoft.geofence.GeofenceTrasitionService" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.smart.earthview.majisoft.MeterLocation"
+            android:label="@string/title_activity_meter_location" />
+        <activity
+            android:name="com.smart.earthview.majisoft.meterStatus.MeterStatus"
+            android:label="@string/title_activity_meter_status"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.geofence.GeoFenceMeter"
+            android:label="@string/title_activity_geo_fence_meter" />
+        <activity
+            android:name="com.smart.earthview.majisoft.geofence.MeterFence"
+            android:label="@string/title_activity_meter_fence"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.geofence.LastFence"
+            android:label="@string/title_activity_last_fence"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name="com.smart.earthview.majisoft.geofence.GeofenceTrasitionServiceb"
+            android:exported="false" />
+
+        <activity
+            android:name="com.smart.earthview.majisoft.analytics.AnalyticsActivity"
+            android:label="@string/title_activity_analytics"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.sitesurvey.Survey"
+            android:label="@string/title_activity_survey"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.DisconnectionActivity"
+            android:label="@string/title_activity_disconnection"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.ReconnectionActivity"
+            android:label="@string/title_activity_reconnection"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.SystemMeter"
+            android:label="@string/title_activity_system_meter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.smart.earthview.majisoft.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:theme="@style/AppTheme.NoActionBar" >
+
+        </activity>
+        <activity
+            android:name="com.smart.earthview.majisoft.LandingActivity"
+            android:label="@string/title_activity_landing"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

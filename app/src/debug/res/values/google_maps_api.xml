@@ -1,0 +1,27 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=F5:E2:09:D7:F1:24:34:56:31:49:69:5E:8E:71:67:F3:81:61:01:F4%3Bcom.smart.earthview.earthviewsmartmeter
+
+    You can also add your credentials to an existing key, using these values:
+
+    Package name:
+    F5:E2:09:D7:F1:24:34:56:31:49:69:5E:8E:71:67:F3:81:61:01:F4
+
+    SHA-1 certificate fingerprint:
+    F5:E2:09:D7:F1:24:34:56:31:49:69:5E:8E:71:67:F3:81:61:01:F4
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.//old AIzaSyAjfhHUSdLmgY2Z_oqWrarzE_-4Eap8gGE
+    old-key => AIzaSyCP7UI3YBahGakvh8SYUE_3KrKB3kDQRWY
+    //a bit new-AIzaSyDR-FThbkA8_M6AftZaCt3hkl_hPejGKqE
+    //last AIzaSyAOe2K7xvXyTqraGKHzmtdeNwv1QqzVmKY
+    -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAVmp7OO3nQqR8puvYjqqW2o1nfdtgNv0c</string>
+</resources>

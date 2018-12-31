@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LoginActivity"
+    android:background="@color/colorPrimary"
+    tools:showIn="@layout/activity_login"
+   >
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:id="@+id/relativemap"/>
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="90dp"
+        android:id="@+id/imglogo"
+        android:layout_marginTop="@dimen/login_edt"
+        android:layout_below="@id/relativemap"
+        android:src="@drawable/logoc"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90sp"
+        android:id="@+id/majititle"
+        android:layout_below="@id/relativemap"
+        android:text="MajiSoft Installation"
+        android:layout_toRightOf="@id/imglogo"
+        android:layout_margin="@dimen/login_edt"
+        android:textSize="@dimen/textsizetitle"
+        android:gravity="center_vertical"
+        android:textColor="@color/whiteColor"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imglogo"
+        android:layout_margin="@dimen/login_edt"
+        android:textColor="@color/whiteColor"
+        android:textSize="@dimen/textsizetitle"
+        android:text="Please enter your username and password to install"
+        android:id="@+id/logtitle"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_margin="@dimen/login_edt"
+        android:layout_centerInParent="true"
+        android:id="@+id/username">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/TextEdit"
+            android:layout_weight="0.5"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/textsizetitle"
+            android:textColor="@color/whiteColor"
+            android:text="@string/username"
+            />
+        <EditText
+            android:id="@+id/editTextusername"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/TextEdit"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_white"
+            android:layout_weight="1"
+            android:inputType="" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/username"
+        android:layout_margin="@dimen/login_edt"
+        android:id="@+id/password">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/TextEdit"
+            android:layout_weight="0.5"
+            android:layout_marginTop="8dp"
+            android:textSize="@dimen/textsizetitle"
+            android:textColor="@color/whiteColor"
+            android:text="@string/password"
+            />
+        <EditText
+            android:id="@+id/editTextpassword"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/TextEdit"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/back_white"
+            android:layout_weight="1"
+            android:inputType="" />
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/button_height"
+        android:layout_centerHorizontal="true"
+        android:background="@color/whiteColor"
+        android:layout_below="@id/password"
+        android:id="@+id/btnlogin"
+        android:text="INSTALL"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/copyright"
+        android:text="@string/copyright"
+        android:layout_alignParentBottom="true"
+        android:textAlignment="center"
+        android:textSize="@dimen/copyright_size"
+        android:textColor="@color/whiteColor"
+        android:layout_marginBottom="@dimen/login_edt"/>
+</RelativeLayout>

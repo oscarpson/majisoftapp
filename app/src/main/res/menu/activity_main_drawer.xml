@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_reconnect"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Reconnect" />
+        <item
+            android:id="@+id/nav_disconnect"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Disconnect" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Zone Map" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_status"
+            android:title="Status" />
+        <item
+        android:id="@+id/nav_analytics"
+        android:icon="@drawable/ic_menu_slideshow"
+        android:title="Analytics" />
+        <item
+            android:id="@+id/nav_survey"
+            android:icon="@drawable/ic_svy"
+            android:title="Survey" />
+
+    </group>
+
+
+</menu>
