@@ -99,9 +99,9 @@ import static com.smart.earthview.majisoft.constant.SnackClass.setSnackBar;
 public class MainActivity extends AppCompatActivity
         implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener ,NavigationView.OnNavigationItemSelectedListener {
 
-    ArrayList<String> zones,statusArray,mreaderArray;
-    ArrayAdapter adapter,adapter2,mreaderAdapter;
-    Spinner zoneSpinner,mstatus,mreader;
+    ArrayList<String> zones,statusArray,mreaderArray,subzones;
+    ArrayAdapter adapter,adapter2,mreaderAdapter,subadapter;
+    Spinner zoneSpinner,mstatus,mreader,subzonespinner;
     Marker myMarker;
     ArrayList<CustomerClass> customerList;
     TextView txtaccno,txtcname,txtcdate;
@@ -156,21 +156,37 @@ public class MainActivity extends AppCompatActivity
             zoneSpinner = findViewById(R.id.zonespinner);
             relativemap = findViewById(R.id.relativemap);
             btnreset = findViewById(R.id.btnreset);
+        subzonespinner=findViewById(R.id.subzonespinner);
             //  final MajiRepository majiRepository=new MajiRepository(getApplicationContext());
             mstatus = findViewById(R.id.mstatus);
             mreader = findViewById(R.id.mreader);
             btnpost = findViewById(R.id.btnpost);
             constants = new Constants();
             zones = new ArrayList<>();
-            zones.add("Kavuu");
-            zones.add("Kithyka");
-            zones.add("Mutheu");
-            zones.add("Musya");
-            zones.add("Masaku");
+            zones.add("EASTERN");
+            zones.add("NGIINI");
+            zones.add("TOWN");
+            zones.add("KALUNDU");
+            zones.add("SWAHILI");
+            zones.add("KWA NGINDU");
+            zones.add("SITE");
+            zones.add("MULANGO");
+            zones.add("KAVISUNI");
+            zones.add("MAJENGO");
+            zones.add("KILONZO");
+            zones.add("SYONGILA");
 
             adapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, zones);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             zoneSpinner.setAdapter(adapter);
+            subzones=new ArrayList<>();
+            subzones.add("MWEMA");
+            subzones.add("SALIMA");
+            subzones.add("MATUNDA");
+            subzones.add("ZALYNE");
+            subadapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,subzones);
+            subadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            subzonespinner.setAdapter(subadapter);
             statusArray = new ArrayList<>();
             statusArray.add("Actual");
             statusArray.add("Gate closed");
@@ -192,11 +208,14 @@ public class MainActivity extends AppCompatActivity
                 }
             });
             mreaderArray = new ArrayList<>();
-            mreaderArray.add("Kevin Kihara");
-            mreaderArray.add("Bruce Obwari");
-            mreaderArray.add("Griffin Marita");
-            mreaderArray.add("Charles Kaloki");
-            mreaderArray.add("Eric Mwenda");
+            mreaderArray.add("MAXWELL MUTINDA");
+            mreaderArray.add("DENNIS IRERI");
+            mreaderArray.add("ALEX MUMO");
+            mreaderArray.add("KYALO NZUNGU");
+            mreaderArray.add("JANE WASHEKE");
+            mreaderArray.add("LYDIA ORANGA");
+            mreaderArray.add("AGNES KAVENGI");
+            mreaderArray.add("JOHNSON MUSEMBI");
             mreaderAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, mreaderArray);
             mreaderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             mreader.setAdapter(mreaderAdapter);
@@ -213,11 +232,11 @@ public class MainActivity extends AppCompatActivity
             });
             //storing arraylist customer
             customerList = new ArrayList<>();
-            customerList.add(new CustomerClass("0001", "00100", "Kitwasco", "12/12/2017", "Kavuu", "-1.381811,38.002383"));
-            customerList.add(new CustomerClass("0002", "00200", "Park side villa", "12/12/2017", "Kithyka", "-1.366263,38.003794"));
-            customerList.add(new CustomerClass("0003", "00300", "Kitui mtc", "12/08/2018", "Mutheu", "-1.384612,38.010665"));
-            customerList.add(new CustomerClass("0004", "00400", "Kitui water institute", "12/08/2018", "Musya", "-1.385298,38.007618"));
-            customerList.add(new CustomerClass("0005", "00500", "Kunda Kindu", "12/08/2018", "Masaku", "-1.372623,38.008870"));
+            customerList.add(new CustomerClass("0001", "00100", "Mulango", "12/12/2017", "Eastern", "-1.381811,38.002383"));
+            customerList.add(new CustomerClass("0002", "00200", "Kavisuni", "12/12/2017", "Ngiini", "-1.366263,38.003794"));
+            customerList.add(new CustomerClass("0003", "00300", "Majengo", "12/08/2018", "Town", "-1.384612,38.010665"));
+            customerList.add(new CustomerClass("0004", "00400", "Kilonzo", "12/08/2018", "Kalundu", "-1.385298,38.007618"));
+            customerList.add(new CustomerClass("0005", "00500", "Syiongila", "12/08/2018", "Swahili", "-1.372623,38.008870"));
             //PopulateData();
             //PopulateCustomers();//TODO uncomment this two
             btnmsearch = findViewById(R.id.btnsearch);
@@ -227,7 +246,7 @@ public class MainActivity extends AppCompatActivity
                 public void onClick(View v) {
                     meterSearch = edtSearch.getText().toString();
                     for (int x = 0; x < customerList.size(); x++) {
-                        if (customerList.get(x).meter_no.contains(meterSearch)) {
+                        if (customerList.get(x).meter_no.toString().contains(meterSearch)) {
                             txtaccno.setText(customerList.get(x).acc_no);
                             txtcname.setText(customerList.get(x).userName);
                             txtcdate.setText(customerList.get(x).prDate);
@@ -333,6 +352,7 @@ public class MainActivity extends AppCompatActivity
                         }
                     });
                     googleMap = mMap;
+                    //String initial="-1.385298,38.007618";
                     String[] latslong = customerList.get(1).meter_location.split(",");
                     Log.e("coods", latslong[0] + "and longs\n" + latslong[1]);
                     String lats = latslong[0];
@@ -380,6 +400,8 @@ public class MainActivity extends AppCompatActivity
                 public void onChanged(@Nullable List<CustomerClass> customerClasses) {
 
                     for(CustomerClass customerClass : customerClasses){
+                        customerList.add(customerClass);
+
                         Log.e("customerx",customerClass.getUserName());
                     }
                 }

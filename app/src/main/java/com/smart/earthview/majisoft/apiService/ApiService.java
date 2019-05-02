@@ -1,5 +1,6 @@
 package com.smart.earthview.majisoft.apiService;
 
+import com.google.android.gms.common.internal.safeparcel.SafeParcelable;
 import com.smart.earthview.majisoft.MainSeedData;
 import com.smart.earthview.majisoft.NewRecordResults;
 import com.smart.earthview.majisoft.ResponseRetro;
@@ -52,7 +53,15 @@ public interface ApiService {
             @Field("connection") String connection,
             @Field("latslongs") String latslongs,
             @Field("mastermeter") String mastermeter,
-            @Field("serviceLine") String serviceLine);
+            @Field("serviceLine") String serviceLine,
+            @Field("connectionNo") String connectionNo,
+            @Field("customer") String customer,
+            @Field("existingconn") String existingconn,
+            @Field("subzone") String subzone,
+            @Field("sanitationtype") String sanitationtype);
+
+
+    ////svyconnectionNo, svycustomer,svyexistingconn,svysubzone,svysanitationtype
 
     //disconnection
     @FormUrlEncoded

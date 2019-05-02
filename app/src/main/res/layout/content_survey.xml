@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".sitesurvey.Survey"
+    android:background="@drawable/backshape"
     tools:showIn="@layout/activity_survey">
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -44,76 +45,136 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_below="@id/zonelayer"
+            android:background="@drawable/bg_gray"
+            android:layout_marginTop="4dp"
+            android:id="@+id/subzonelayer">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/TextEdit"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/textcolor"
+                android:id="@+id/subzonetitle"
+                android:text="Sub-Zone:"
+                />
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:id="@+id/subzonespinner"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/subzonelayer"
             android:layout_marginTop="@dimen/survey_margin"
             android:id="@+id/layerg">
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/TextEdit"
-                android:layout_weight="1"
+                android:layout_weight="0.25"
                 android:textSize="@dimen/textsize"
                 android:textColor="@color/textcolor"
-                android:text="Date:"
+                android:text="@string/customer_name"
                 />
             <EditText
-                android:id="@+id/edtdate"
+                android:id="@+id/edtcustomer"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/TextEdit"
                 android:layout_marginTop="8dp"
-                android:editable="false"
+                android:text="0"
                 android:background="@drawable/bg_gray"
 
-                android:layout_weight="1"
+                android:layout_weight="0.75"
                />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_below="@id/layerg"
-            android:layout_marginTop="@dimen/survey_margin"
-            android:id="@+id/layerconnect">
+            android:background="@drawable/bg_gray"
+            android:layout_marginTop="4dp"
+            android:id="@+id/existing_connection"
+            >
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/TextEdit"
                 android:layout_weight="1"
                 android:textSize="@dimen/textsize"
+                android:layout_marginTop="8dp"
                 android:textColor="@color/textcolor"
-                android:text="Type of connection:"
+                android:id="@+id/reader"
+                android:text="@string/existing_connection"
                 />
-            <LinearLayout
-                android:id="@+id/layerconn"
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical"
                 android:layout_weight="1"
-                >
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Commercial"
-                    android:id="@+id/chkcommercial"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DOMESTIC"
-                    android:id="@+id/chkdomestic"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="HOSPITAL"
-                    android:id="@+id/chkhospital"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="SCHOOL"
-                    android:id="@+id/chkschool"/>
-            </LinearLayout>
+                android:id="@+id/mextisingconnection"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/layerconnect"
+            android:layout_below="@id/existing_connection"
+            android:layout_marginTop="@dimen/survey_margin"
+            android:visibility="gone"
+            android:id="@+id/connectio_numberlayer">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/TextEdit"
+                android:layout_weight="0.3"
+                android:textSize="@dimen/textsize"
+                android:textColor="@color/textcolor"
+                android:text="@string/customer_number"
+                />
+            <EditText
+                android:id="@+id/edtconnectionNo"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/TextEdit"
+                android:layout_marginTop="8dp"
+
+                android:background="@drawable/bg_gray"
+
+                android:layout_weight="0.7"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/connectio_numberlayer"
+            android:background="@drawable/bg_gray"
+            android:layout_marginTop="4dp"
+            android:id="@+id/type_of_connection_layer"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/TextEdit"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize"
+                android:layout_marginTop="8dp"
+                android:textColor="@color/textcolor"
+                android:id="@+id/typeconnection"
+                android:text="@string/type_of_connection"
+                />
+            <Spinner
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:id="@+id/mconnectiontype"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/type_of_connection_layer"
             android:layout_marginTop="@dimen/survey_margin"
             android:id="@+id/layercod">
         <TextView
@@ -154,42 +215,33 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal"
             android:layout_below="@id/layercod"
-            android:layout_marginTop="@dimen/survey_margin"
-            android:id="@+id/layersanitation">
+            android:background="@drawable/bg_gray"
+            android:layout_marginTop="4dp"
+            android:id="@+id/type_of_sanitation"
+            >
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="@dimen/TextEdit"
                 android:layout_weight="1"
                 android:textSize="@dimen/textsize"
+                android:layout_marginTop="8dp"
                 android:textColor="@color/textcolor"
-                android:text="Sanitation type:"
+                android:id="@+id/typesaitation"
+                android:text="@string/type_of_sanitation"
                 />
-            <LinearLayout
-                android:id="@+id/layersann"
+            <Spinner
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:orientation="vertical"
                 android:layout_weight="1"
-                >
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Pit latrine"
-                    android:id="@+id/chkpit"/>
-                <CheckBox
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Bio digester"
-                    android:id="@+id/chkbio"/>
-
-            </LinearLayout>
+                android:id="@+id/msanitationtype"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/layersanitation"
+            android:layout_below="@id/type_of_sanitation"
             android:layout_marginTop="@dimen/survey_margin"
             android:id="@+id/layermeter">
             <TextView
@@ -238,7 +290,7 @@
             android:layout_alignParentBottom="true"
 
             android:id="@+id/layerh"
-            android:layout_marginBottom="13dp">
+            android:layout_marginBottom="26dp">
             <Button
                 android:layout_width="0dp"
                 android:layout_height="@dimen/button_height"

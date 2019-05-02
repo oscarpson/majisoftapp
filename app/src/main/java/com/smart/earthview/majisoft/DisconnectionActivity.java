@@ -49,9 +49,9 @@ import static com.smart.earthview.majisoft.constant.SnackClass.setErrorSnackbar;
 import static com.smart.earthview.majisoft.constant.SnackClass.setSnackBar;
 
 public class DisconnectionActivity extends AppCompatActivity {
-    ArrayList<String> zones,statusArray,mreaderArray;
-    ArrayAdapter adapter,adapter2,mreaderAdapter;
-    Spinner zoneSpinner,mstatus,mreader;
+    ArrayList<String> zones,statusArray,mreaderArray,mactionarray;
+    ArrayAdapter adapter,adapter2,mreaderAdapter,mactionadapter;
+    Spinner zoneSpinner,mstatus,mreader,maction;
     Marker myMarker;
     ArrayList<CustomerClass> customerList;
     TextView txtaccno,txtcname,txtcdate;
@@ -107,12 +107,23 @@ public class DisconnectionActivity extends AppCompatActivity {
         mstatus=findViewById(R.id.mstatus);
         mreader=findViewById(R.id.mreader);
         constants=new Constants();
+        maction=findViewById(R.id.maction);
         statusArray=new ArrayList<>();
-        statusArray.add("Kevin Kihara");
-        statusArray.add("Bruce Obwari");
-        statusArray.add("Griffin Marita");
-        statusArray.add("Charles Kaloki");
-        statusArray.add("Eric Mwenda");
+        statusArray.add("MAXWELL MUTINDA");
+        statusArray.add("DENNIS IRERI");
+        statusArray.add("ALEX MUMO");
+        statusArray.add("KYALO NZUNGU");
+        statusArray.add("JANE WASHEKE");
+        statusArray.add("LYDIA ORANGA");
+        statusArray.add("AGNES KAVENGI");
+        statusArray.add("JOHNSON MUSEMBI");
+        statusArray.add("SITE");
+        statusArray.add("MULANGO");
+        statusArray.add("KAVISUNI");
+        statusArray.add("MAJENGO");
+        statusArray.add("KILONZO");
+        statusArray.add("SYONGILA");
+
 
         adapter2=new ArrayAdapter(this,android.R.layout.simple_spinner_item,statusArray);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -148,13 +159,24 @@ public class DisconnectionActivity extends AppCompatActivity {
 
             }
         });
+
+        mactionarray=new ArrayList<>();
+        mactionarray.add("All services Reconnection");
+        mactionarray.add("Water only Reconnection");
+        mactionarray.add("Sewer only Reconnection");
+
+        mactionadapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,mactionarray);
+        mactionadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        maction.setAdapter(mactionadapter);
+
         //storing arraylist customer
         customerList=new ArrayList<>();
-        customerList.add(new CustomerClass("0001","00100","Kitwasco","12/12/2017","Kavuu","-1.381811,38.002383"));
-        customerList.add(new CustomerClass("0002","00200","Park side villa","12/12/2017","Kithyka","-1.366263,38.003794"));
-        customerList.add(new CustomerClass("0003","00300","Kitui mtc","12/08/2018","Mutheu","-1.384612,38.010665"));
-        customerList.add(new CustomerClass("0004","00400","Kitui water institute","12/08/2018","Musya","-1.385298,38.007618"));
-        customerList.add(new CustomerClass("0005","00500","Kunda Kindu","12/08/2018","Masaku","-1.372623,38.008870"));
+        customerList = new ArrayList<>();
+        customerList.add(new CustomerClass("0001", "00100", "Mulango", "12/12/2017", "Eastern", "-1.381811,38.002383"));
+        customerList.add(new CustomerClass("0002", "00200", "Kavisuni", "12/12/2017", "Ngiini", "-1.366263,38.003794"));
+        customerList.add(new CustomerClass("0003", "00300", "Majengo", "12/08/2018", "Town", "-1.384612,38.010665"));
+        customerList.add(new CustomerClass("0004", "00400", "Kilonzo", "12/08/2018", "Kalundu", "-1.385298,38.007618"));
+        customerList.add(new CustomerClass("0005", "00500", "Syiongila", "12/08/2018", "Swahili", "-1.372623,38.008870"));
         //PopulateData();
         btnmsearch=findViewById(R.id.btnsearch);
         btnsave=findViewById(R.id.btnregister);

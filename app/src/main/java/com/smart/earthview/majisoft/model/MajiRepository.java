@@ -18,7 +18,7 @@ public class MajiRepository {
      public MajiRepository(Context context){
          majidb= Room.databaseBuilder(context,MajiDatabase.class,DB_NAME).addMigrations(MIGRATION_1_2).fallbackToDestructiveMigration().build();//
      }
-    static final Migration MIGRATION_1_2 = new Migration(5, 4) {
+    static final Migration MIGRATION_1_2 = new Migration(6, 5) {
         @Override
         public void migrate(SupportSQLiteDatabase database) {
 // Since we didn't alter the table, there's nothing else to do here.

@@ -14,7 +14,7 @@
         android:layout_height="90dp"
         android:id="@+id/imglogo"
         android:layout_marginTop="@dimen/login_edt"
-        android:src="@drawable/logoc"/>
+        android:src="@drawable/landingicon"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="90sp"

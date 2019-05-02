@@ -41,9 +41,9 @@ import static com.smart.earthview.majisoft.constant.SnackClass.setErrorSnackbar;
 import static com.smart.earthview.majisoft.constant.SnackClass.setSnackBar;
 
 public class ReconnectionActivity extends AppCompatActivity {
-    ArrayList<String> zones,statusArray,mreaderArray;
-    ArrayAdapter adapter,adapter2,mreaderAdapter;
-    Spinner zoneSpinner,mstatus,mreader;
+    ArrayList<String> zones,statusArray,mreaderArray,mactionarray;
+    ArrayAdapter adapter,adapter2,mreaderAdapter,mactionadapter;
+    Spinner zoneSpinner,mstatus,mreader,maction;
     Marker myMarker;
     ArrayList<CustomerClass> customerList;
     TextView txtaccno,txtcname,txtcdate;
@@ -70,12 +70,16 @@ public class ReconnectionActivity extends AppCompatActivity {
         edtmessage=findViewById(R.id.edtmessage);
         relativemap=findViewById(R.id.relativemap);
         mreader=findViewById(R.id.mreader);
+        maction=findViewById(R.id.maction);
         mreaderArray=new ArrayList<>();
-        mreaderArray.add("Kevin Kihara");
-        mreaderArray.add("Bruce Obwari");
-        mreaderArray.add("Griffin Marita");
-        mreaderArray.add("Charles Kaloki");
-        mreaderArray.add("Eric Mwenda");
+        mreaderArray.add("MAXWELL MUTINDA");
+        mreaderArray.add("DENNIS IRERI");
+        mreaderArray.add("ALEX MUMO");
+        mreaderArray.add("KYALO NZUNGU");
+        mreaderArray.add("JANE WASHEKE");
+        mreaderArray.add("LYDIA ORANGA");
+        mreaderArray.add("AGNES KAVENGI");
+        mreaderArray.add("JOHNSON MUSEMBI");
 
         mreaderAdapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,mreaderArray);
         mreaderAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -91,13 +95,24 @@ public class ReconnectionActivity extends AppCompatActivity {
 
             }
         });
+
+        mactionarray=new ArrayList<>();
+        mactionarray.add("All services Reconnection");
+        mactionarray.add("Water only Reconnection");
+        mactionarray.add("Sewer only Reconnection");
+
+        mactionadapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,mactionarray);
+        mactionadapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        maction.setAdapter(mactionadapter);
+
         //storing arraylist customer
         customerList=new ArrayList<>();
-        customerList.add(new CustomerClass("0001","00100","Kitwasco","12/12/2017","Kavuu","-1.381811,38.002383"));
-        customerList.add(new CustomerClass("0002","00200","Park side villa","12/12/2017","Kithyka","-1.366263,38.003794"));
-        customerList.add(new CustomerClass("0003","00300","Kitui mtc","12/08/2018","Mutheu","-1.384612,38.010665"));
-        customerList.add(new CustomerClass("0004","00400","Kitui water institute","12/08/2018","Musya","-1.385298,38.007618"));
-        customerList.add(new CustomerClass("0005","00500","Kunda Kindu","12/08/2018","Masaku","-1.372623,38.008870"));
+        customerList = new ArrayList<>();
+        customerList.add(new CustomerClass("0001", "00100", "Mulango", "12/12/2017", "Eastern", "-1.381811,38.002383"));
+        customerList.add(new CustomerClass("0002", "00200", "Kavisuni", "12/12/2017", "Ngiini", "-1.366263,38.003794"));
+        customerList.add(new CustomerClass("0003", "00300", "Majengo", "12/08/2018", "Town", "-1.384612,38.010665"));
+        customerList.add(new CustomerClass("0004", "00400", "Kilonzo", "12/08/2018", "Kalundu", "-1.385298,38.007618"));
+        customerList.add(new CustomerClass("0005", "00500", "Syiongila", "12/08/2018", "Swahili", "-1.372623,38.008870"));
         //PopulateData();
         btnmsearch=findViewById(R.id.btnsearch);
         btnsave=findViewById(R.id.btnregister);

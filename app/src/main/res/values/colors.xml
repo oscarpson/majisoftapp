@@ -5,6 +5,7 @@
     <color name="colorPrimaryb">#163758</color><!--3F51B5-->
     <color name="colorPrimaryDarkb">#9EC0F5</color>
     <color name="colorAccent">#FF4081</color>
+    <!--<color name="textcolor">#ffffff</color>-->
     <color name="textcolor">#1882F5</color>
     <color name="table_content">#130202</color>
     <color name="gray">#898298</color>

@@ -126,6 +126,7 @@
                             android:textSize="@dimen/textsize"
                             android:textColor="@color/textcolor"
                             android:text="@string/p_rdate"
+                            android:visibility="gone"
                             android:background="@drawable/cell_shape"
                             android:padding="@dimen/table_padding"
                             android:layout_weight="1"
@@ -162,7 +163,7 @@
                             android:textSize="@dimen/table_content_text"
                             android:textColor="@color/table_content"
                             android:id="@+id/txtcdate"
-
+                            android:visibility="gone"
                             android:background="@drawable/cell_shape"
                             android:padding="@dimen/table_padding"
                             android:layout_weight="1"
@@ -206,7 +207,7 @@
                         android:layout_weight="1"
                         android:textSize="@dimen/textsize"
                         android:textColor="@color/textcolor"
-                        android:text="Reconnection Msg:"
+                        android:text="@string/remarks"
                         />
                     <EditText
                         android:id="@+id/edtmessage"
@@ -221,7 +222,33 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal"
                     android:layout_below="@id/layerg"
+                    android:background="@drawable/bg_gray"
+                    android:layout_marginTop="4dp"
+                    android:id="@+id/reconnect_action"
+                    >
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/TextEdit"
+                        android:layout_weight="1"
+                        android:textSize="@dimen/textsize"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/textcolor"
+                        android:id="@+id/txtaction"
+                        android:text="@string/action_taken"
+                        />
+                    <Spinner
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_weight="1"
+                        android:id="@+id/maction"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reconnect_action"
                     android:id="@+id/layerh"
                     android:layout_marginTop="13dp">
                     <Button

@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.smart.earthview.majisoft.R;
 
+
 public class SnackClass {
 
     public static void setSnackBar(View coordinatorLayout, String snackTitle) {

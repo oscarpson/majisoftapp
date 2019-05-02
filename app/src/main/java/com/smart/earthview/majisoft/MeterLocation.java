@@ -47,11 +47,19 @@ public class MeterLocation extends FragmentActivity implements OnMapReadyCallbac
         }
         zoneSpinner=findViewById(R.id.zonespinner);
         zones=new ArrayList<>();
-        zones.add("Kavuu");
-        zones.add("Kithyka");
-        zones.add("Mutheu");
-        zones.add("Musya");
-        zones.add("Masaku");
+        zones.add("EASTERN");
+        zones.add("NGIINI");
+        zones.add("TOWN");
+        zones.add("KALUNDU");
+        zones.add("SWAHILI");
+        zones.add("KWA NGINDU");
+        zones.add("SITE");
+        zones.add("MULANGO");
+        zones.add("KAVISUNI");
+        zones.add("MAJENGO");
+        zones.add("KILONZO");
+        zones.add("SYONGILA");
+
 
         adapter=new ArrayAdapter(this,android.R.layout.simple_spinner_item,zones);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
